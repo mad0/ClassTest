@@ -3,12 +3,12 @@
 
 int Engine::a = 0;
 
-Engine::Engine() {
+Engine::Engine(int id ) : id(id){
 	a++;
-	std::cout <<"Engine"<<a<<" start..."<<"\n";
+	std::cout << "Engine object: " << a << "\n";
+	std::cout <<"Object ID: "<<id<<" start..."<<"\n\n";
 }
 
 Engine::~Engine() {
-	std::cout << "Engine"<<a<<" stop..." << "\n";
-	a--;
+	std::cout << "Object ID: "<<id<<" stop..." << "\n";
 }

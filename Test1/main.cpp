@@ -1,10 +1,11 @@
 #include "engine.h"
 
 int main() {
+	Engine *wsk;
+	Engine *p = new Engine(10);
+	Engine *c = new Engine(11);
+
+	delete c; delete p;
 	
-	Engine *p = new Engine();
-	Engine *c = new Engine();
-	Engine *d = new Engine();
-	delete p; delete d; delete c;
 return 0;
 }
