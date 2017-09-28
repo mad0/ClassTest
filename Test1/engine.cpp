@@ -3,7 +3,7 @@
 
 int Engine::a = 0;
 
-Engine::Engine(int id ) : id(id){
+Engine::Engine(int i) : id(i){
 	a++;
 	std::cout << "Engine object: " << a << "\n";
 	std::cout <<"Object ID: "<<id<<" start..."<<"\n\n";
