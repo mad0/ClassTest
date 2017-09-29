@@ -20,19 +20,25 @@ Map::Map(int a, int b) : x(a), y(b) {
 	
 }
 Map::~Map() {
+	std::cout << "Niszcze tab...\n";
 }
 
 void Map::DrawMap() {
-	char tab[3] = { 176, 177, 178};
+	char tab[2] = {255, 88};
 	while (y > 0){
+		char *randTab = new char[x];
 		for (int z = 0; z < x; z++) {
-			int r = (std::rand() % 3) + 0;
-			std::cout << tab[r] << " ";
+			randTab[z] = tab[(std::rand() % 2) + 0];
+			std::cout << randTab[z] << randTab[z];
 		}
-			
-	std::cout << "\n\n";
+		std::cout << "\n";
+		for (int z = 0; z < x; z++) {
+			std::cout << randTab[z] << randTab[z];
+		}
+	std::cout << "\n";
+	delete randTab;
 	y--;
-	};
+	}
 }
 
 void Map::DrawInterface() {
